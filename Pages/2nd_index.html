@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css	">
+    <title>Book My Ticket</title>
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-image: url(wp\ 4.jpeg);
+		  
+          display: unset;
+          font-family: 'Varela Round', sans-serif;
+        }
+		@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+*{
+  margin : 0;
+  padding : 0;
+  min-hieght :100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  display : flex;
+  justify-content : space-around;
+  align-items : center;
+  width : 80%;
+  height : 70px;
+  border-bottom : 2px solid black;
+}
+
+.logo a{
+  text-decoration : none;
+  color : black;
+  font-weight : bold;
+  font-size : 20px;
+  margin-left : -37px;
+  cursor : pointer;
+}
+
+.nav a{
+
+  text-decoration : none;
+  padding-bottom : 2px;
+  margin-right : 50px;
+  color : black;
+  font-weight : 550;
+  position : relative;
+  cursor : pointer;
+}
+@media (max-width: 768px){
+  .nav a{
+    display : none;
+  }
+}
+
+.nav a::before{
+  position : absolute;
+  content : '';
+  top: 100%;
+  left : 0;
+  height : 2px;
+  width : 0%;
+  background : black;
+  transition : all ease 0.4s;
+}
+
+.nav a:hover::before{
+  width : 100%;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+@keyframes fade{
+  from{
+    opacity:0.4;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+body{
+  background:#eeeee;
+}
+
+#slider{
+  margin:0 auto;
+  width:80%;
+  overflow:hidden;
+}
+
+.slides{
+  overflow:hidden;
+  animation-name:fade;
+  animation-duration:1s;
+  display:none;
+}
+
+img{
+  width:100%;
+}
+
+#dot{
+  margin:0 auto;
+  text-align:center;
+}
+.dot{
+  display:inline-block;
+  border-radius:50%;
+  background:#d3d3d3;
+  padding:8px;
+  margin:10px 5px;
+}
+
+.active{
+  background:black;
+}
+
+@media (max-width:567px){
+  #slider{
+    width:100%;
+
+  }
+}
+
+#heading{
+  display:block;
+  text-align:center;
+  font-size:2em;
+  margin:10px 0px;
+
+}
+.hamburger {
+  display: none; /* Hide the button by default */
+}
+
+#mobile-nav {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  right: -100%; /* Hide the menu off the right edge of the screen */
+  width: 50%;
+  height: 100vh;
+  background: #333;
+  color: #fff;
+  transition: right 0.3s ease; /* Animate the menu sliding in and out */
+}
+#mobile-nav a {
+  color: #fff; /* Change this to any color that contrasts with the background */
+  display: block;
+  padding: 10px;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    top: 22px;
+    left: 330px;
+    position: fixed;
+    display: block; 
+   
+  }
+  @media (min-width: 500px) {
+  .hamburger {
+    top: 22px;
+    left: 330px;
+    position: fixed;
+    display: block;
+   
+  }
+  .close {
+    display: block; /* Show the close button on small screens */
+    color: #fff;
+    font-size: 2em;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+}
+#on{
+  display: unset;
+}
+nav{
+  display: flex;
+}
+.card {
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); /* Shadow effect */
+  transform: translateY(-10px); /* Upward shift */
+} 
+    </style>
+	
+</head>
+<body><nav>
+	<div class="header">
+		<div class="container">
+		  <div class="logo"><a href="#">Book My Ticket</a></div>
+		  <div class="nav">
+			<a href="#">Home</a>
+			<a href="Error.html">Ratings</a>
+			<a href="Error.html">Details</a>
+			<a id="on" href="#">
+	
+        <select id="location">
+          <option value="" disabled selected>Location</option>
+          <option value="1">Jodhpur</option>
+          <option value="2">PALi</option>
+          <option value="3">beawar</option>
+          <option value="4">ajmer</option>
+          <option value="5">jaipur</option>
+          <option value="6">udaipur</option>
+          <option value="7">sojat</option>
+          <option value="8">dosa</option>
+          <!-- Add more options as needed -->
+      </select>
+				
+			</a>
+      <button class="hamburger">&#9776;</button>
+      <div id="mobile-nav">
+        <button class="close">&times;</button>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+     
+      </div>
+		  </div>
+		</div>
+		  </div>
+		</nav>
+   
+
+	
+		<div id="slider">  
+		<div class="slides">  
+		  <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1706382336630_web.jpg" width="100%" />
+		 </div>
+		  
+		  <div class="slides">  
+		  <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1709101813493_esdsesds.jpg" width="100%" />
+		</div>
+		  
+		  <div class="slides">  
+		  <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1709275300035_freeaccessweb.jpg" />
+		</div> 
+		  
+		 
+		  
+		  <div id="dot"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+		 </div>
+		
+        
+    
+    <div class="cards">
+      <h1>Now Showing</h1>
+        <a href="/Pages/New folder/book.html?img=../Poster/jawan.jpg" class="card">
+            <img src="../Poster/jawan.jpg" alt="">
+        </a>
+        <a href="/Pages/New folder/book.html?img=../Poster/salaar.jpg" class="card">
+            <img src="../Poster/salaar.jpg" alt="">
+        </a>
+        <a href="/Pages/New folder/book.html?img=../Poster/salaar.jpg" class="card">
+            <img src="../Poster/salaar.jpg" alt="">
+        </a>
+        <a href="/Pages/New folder/book.html?img=../Poster/sam bhadhur poster.jpg" class="card">
+            <img src="../Poster/sam bhadhur poster.jpg" alt="">
+        </a>
+        <a href="/Pages/New folder/book.html?img=../Poster/dunki.jpg" class="card">
+            <img src="../Poster/dunki.jpg" alt="">
+        </a>
+    <a href="/Pages/New folder/book.html?img=" class="card">
+            <img src="" alt="">
+        </a>
+        ->
+    </div>
+    <section>
+  <footer style="background-color: #333; color: #fff; text-align: center; padding: 20px;">
+    <p>Thank you for booking your ticket with us!</p>
+    <p>&copy; 2022 Your Company Name</p>
+  </footer>
+</section>
+<script>  function selectPlace(place) {
+	// Update the content of the selected place div
+	document.getElementById("selectedPlace").textContent = "Selected Place: " + place;
+	// Hide the dropdown menu
+	document.getElementById("myDropdown").classList.remove("show");
+  }
+  
+  // Function to toggle the dropdown menu
+  function toggleDropdown() {
+	document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Add event listener to each place link to select it
+  const placeLinks = document.querySelectorAll(".dropdown-content a");
+  placeLinks.forEach(function(link) {
+	link.addEventListener('click', function() {
+	  selectPlace(link.textContent);
+	});
+  });
+  
+  var index = 0;
+var slides = document.querySelectorAll(".slides");
+var dot = document.querySelectorAll(".dot");
+
+function changeSlide(){
+
+  if(index<0){
+    index = slides.length-1;
+  }
+  
+  if(index>slides.length-1){
+    index = 0;
+  }
+  
+  for(let i=0;i<slides.length;i++){
+    slides[i].style.display = "none";
+    dot[i].classList.remove("active");
+  }
+  
+  slides[index].style.display= "block";
+  dot[index].classList.add("active");
+  
+  index++;
+  
+  setTimeout(changeSlide,2000);
+  
+}
+
+changeSlide(); 
+let hamburger = document.querySelector('.hamburger');
+let close = document.querySelector('.close');
+let mobileNav = document.getElementById('mobile-nav');
+
+function toggleNav() {
+  if (mobileNav.style.right === '-100%') {
+    mobileNav.style.right = '0'; /* Show the menu */
+  } else {
+    mobileNav.style.right = '-100%'; /* Hide the menu */
+  }
+}
+
+hamburger.addEventListener('click', toggleNav);
+close.addEventListener('click', toggleNav);</script>
+    <script ></script>
+</body>
+</html>
